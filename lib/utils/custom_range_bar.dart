@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neodocs_task/utils/custom_snackbar.dart';
 import '../model/range_model.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -22,6 +23,7 @@ class CustomRangeBar extends StatelessWidget {
       builder: (context, constraints) {
         final barWidth = constraints.maxWidth;
         final position = ((value - min) / total).clamp(0.0, 1.0) * barWidth;
+
 
         return Column(
           children: [
